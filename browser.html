@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>BookRent</title>
+<link rel="stylesheet" href="CSS/style3.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">BookRent</div>
+
+<input type="text" id="searchBar" placeholder="Search books...">
+
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Browse</a>
+<a href="#">about us</a>
+<a href="#" onclick="openProfile()">Profile</a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO BANNER -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Rent Books at <span>Affordable Prices</span></h1>
+
+<p>Explore, Rent & Return Books Easily at Your Doorstep.</p>
+
+<p>Browse Books</p>
+
+</div>
+
+<div class="hero-img">
+
+<img src="assets/browser.jpg" alt="Book Banner">
+
+</div>
+
+</section>
+
+
+
+<!-- BOOK SECTION -->
+
+<section class="books">
+
+<h2>Popular Books</h2>
+
+<div id="bookContainer" class="book-container"></div>
+
+</section>
+
+
+<!-- PROFILE -->
+
+<div id="profileModal" class="modal">
+
+<div class="modal-content profile">
+
+<h2>My Profile</h2>
+
+<div id="profileInfo"></div>
+
+<hr>
+
+<h3>My Services</h3>
+
+<button onclick="openSell()">Sell Book</button>
+<button onclick="openDonate()">Donate Book</button>
+
+<h3>My Books</h3>
+
+<div id="userBooks"></div>
+
+</div>
+
+</div>
+
+
+
+<!-- SELL -->
+
+<div id="sellModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Sell Book</h2>
+
+<input type="text" id="sellTitle" placeholder="Title">
+
+<input type="text" id="sellAuthor" placeholder="Author">
+
+<input type="number" id="sellPrice" placeholder="Price">
+
+<button onclick="sellBook()">Submit</button>
+
+</div>
+
+</div>
+
+
+
+<!-- DONATE -->
+
+<div id="donateModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Donate Book</h2>
+
+<input type="text" id="donateTitle" placeholder="Title">
+
+<input type="text" id="donateAuthor" placeholder="Author">
+
+<button onclick="donateBook()">Donate</button>
+
+</div>
+
+</div>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
