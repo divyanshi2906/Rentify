@@ -1,0 +1,350 @@
+
+/* ================= ROOT VARIABLES ================= */
+
+:root{
+  --main-font:'Poppins',sans-serif;
+  --bg-color:#f8fafc;
+  --text-color:#1e293b;
+  --primary-color:#4f46e5;
+  --signup-color:#231e85;
+  --footer-bg:#1e293b;
+}
+
+/* ================= GLOBAL ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial',sans-serif;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:var(--main-font);
+background:var(--bg-color);
+color:var(--text-color);
+margin:0;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#fff;
+box-shadow:0 2px 15px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:#2d6cdf;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text-color);
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#18137b;
+}
+
+
+.signup{
+background:var(--signup-color);
+color:#fff!important;
+padding:8px 16px;
+border-radius:6px;
+}
+
+
+
+.menu-toggle{
+display:none;
+font-size:25px;
+cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:50px;
+background:#eef3ff;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.primary-btn{
+margin-top:25px;
+padding:12px 28px;
+background:linear-gradient(135deg,#f97316,#fb923c);
+border:none;
+color:#fff;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.primary-btn:hover{
+transform:translateY(-3px);
+}
+
+/* ================= SECTION ================= */
+
+.section{
+padding:70px 8%;
+}
+
+.section h2{
+margin-bottom:40px;
+}
+
+.alt{
+background:#f1f5f9;
+}
+
+/* ================= BOOK GRID ================= */
+
+.book-grid,
+.category-grid,
+.steps-grid{
+display:grid;
+gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+/* ================= BOOK CARDS ================= */
+
+.book-card{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+text-align:center;
+transition:.3s;
+}
+
+.book-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(79,70,229,.15);
+}
+
+.book-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.book-card button{
+margin-top:10px;
+padding:8px 14px;
+background:var(--primary-color);
+color:#fff;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* ================= CATEGORY ================= */
+
+.category-card{
+background:#fff;
+padding: 12px;
+border-radius:9px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+text-align:center;
+transition:.3s;
+}
+
+.category-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(79,70,229,.15);
+}
+
+.category-card img{
+width: 180px;
+height:200px;
+object-fit:contain;
+display:block;
+margin:auto;
+}
+/* ================= STEPS ================= */
+
+.step{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+text-align:center;
+transition:.3s;
+}
+
+.step-number{
+width:50px;
+height:50px;
+background:linear-gradient(135deg,#4f46e5,#6366f1);
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 15px;
+}
+
+/* ================= LOGIN / SIGNUP (NEW) ================= */
+
+body.login-body{
+height:100vh;
+background:#f3e8ff;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+display:flex;
+width:800px;
+max-width:95%;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+min-height:450px;   /* increase login box height */
+}
+
+
+/* LEFT PANEL */
+
+.left-panel{
+width:40%;
+background:#7c3aed;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.left-panel h1{
+margin-bottom:10px;
+}
+
+.left-panel p{
+margin-bottom:20px;
+}
+
+#toggleBtn{
+background:white;
+color:#7c3aed;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* RIGHT PANEL */
+
+.right-panel{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+/* FORMS */
+
+.form{
+display:none;
+flex-direction:column;
+width:70%;
+}
+
+.form.active{
+display:flex;
+}
+
+.form input{
+padding:12px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+/* BUTTON */
+
+.main-btn{
+background:#7c3aed;
+color:white;
+border:none;
+padding:12px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.main-btn:hover{
+background:#6d28d9;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:var(--footer-bg);
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){ 
+.container{ 
+flex-direction:column; 
+width:95%; 
+}
+
+.left-panel{ 
+width:100%; 
+padding:30px; 
+} 
+.right-panel{ 
+width:100%; 
+padding:30px; 
+} 
+.hero{ 
+flex-direction:column; 
+text-align:center; 
+} 
+}
